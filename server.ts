@@ -11,7 +11,7 @@ const LOCAL_HOST = 'http://192.168.3.34';
 /** ================ Config ================ */
 
 
-const server = Deno.listenTls({ port: LOCAL_PORT });
+const server = Deno.listen({ port: LOCAL_PORT });
 console.log(`HTTP webserver running. Access it at: ${LOCAL_HOST}:${LOCAL_PORT}`);
 
 for await (const conn of server) {
